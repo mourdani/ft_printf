@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:02:25 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/14 02:59:01 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:17:40 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	ft_format(const char format, va_list args)
 		str_length = ft_putptr(va_arg(args, unsigned long));
 	}
 	else if (format == 'd' || format == 'i')
-		str_length = ft_putnbr(va_arg(args, int));
+		str_length = ft_putnum(va_arg(args, int));
 	else if (format == 'u')
-		str_length = ft_unsigned(va_arg(args, unsigned int));
+		str_length = ft_putunum(va_arg(args, unsigned int));
 	else if (format == 'x')
-		str_length = dec_to_hex(va_arg(args, int), 'x');
+		str_length = ft_puthex(va_arg(args, int), 'x');
 	else if (format == 'X')
-		str_length = dec_to_hex(va_arg(args, int), 'X');
+		str_length = ft_puthex(va_arg(args, int), 'X');
 	else if (format == '%')
 		str_length = ft_putchar('%');
 	return (str_length);

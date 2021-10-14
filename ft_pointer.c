@@ -6,37 +6,37 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:03:27 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/13 04:31:32 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/15 01:26:20 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ptr_length(unsigned long num)
+int	get_ptr_len(unsigned long n)
 {
 	int	len;
 
 	len = 0;
-	while (num > 16)
+	while (n > 16)
 	{
 		len++;
-		num = num / 16;
+		n = n / 16;
 	}
 	return (len + 1);
 }
 
-int	ft_putptr(unsigned long num)
+int	ft_putptr(unsigned long n)
 {
-	if (num >= 16)
+	if (n >= 16)
 	{
-		ft_putptr(num / 16);
-		ft_putptr(num % 16);
+		ft_putptr(n / 16);
+		ft_putptr(n % 16);
 	}
-	else if (num <= 9)
-		ft_putchar(num + '0');
+	else if (n <= 9)
+		ft_putchar(n + '0');
 	else
 	{
-		ft_putchar(num - 10 + 'a');
+		ft_putchar(n - 10 + 'a');
 	}
-	return (ptr_length(num) + 2);
+	return (get_ptr_len(n) + 2);
 }

@@ -1,2 +1,5 @@
 santana/
 main.c
+*.o
+*.a
+*.out
