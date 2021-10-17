@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:03:27 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/17 17:42:43 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 18:10:08 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,7 @@ void	ft_putnbr_hex(unsigned long n)
 	else if (n <= 9)
 		ft_putchar(n + '0');
 	else
-	{
 		ft_putchar(n - 10 + 'a');
-	}
 }
 
 int	ft_putptr(unsigned long n)

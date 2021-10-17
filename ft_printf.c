@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:02:25 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/15 01:17:40 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 18:20:58 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,23 @@
 
 int	ft_format(const char format, va_list args)
 {
-	int	str_length;
-
-	str_length = 0;
 	if (format == 'c')
-		str_length = ft_putchar(va_arg(args, int));
+		return(ft_putchar(va_arg(args, int)));
 	else if (format == 's')
-		str_length = ft_putstr(va_arg(args, const char *));
+		return(ft_putstr(va_arg(args, const char *)));
 	else if (format == 'p')
-		str_length = ft_putptr(va_arg(args, unsigned long));
+		return (ft_putptr(va_arg(args, unsigned long)));
 	else if (format == 'd' || format == 'i')
-		str_length = ft_putnum(va_arg(args, int));
+		return  (ft_putnum(va_arg(args, int)));
 	else if (format == 'u')
-		str_length = ft_putunum(va_arg(args, unsigned int));
+		return (ft_putunum(va_arg(args, unsigned int)));
 	else if (format == 'x')
-		str_length = ft_puthex(va_arg(args, int), 'x');
+		return (ft_puthex(va_arg(args, int), 'x'));
 	else if (format == 'X')
-		str_length = ft_puthex(va_arg(args, int), 'X');
+		return (ft_puthex(va_arg(args, int), 'X'));
 	else if (format == '%')
-		str_length = ft_putchar('%');
-	return (str_length);
+		return (ft_putchar('%'));
+	return (0);
 }
 
 int	ft_printf(const char *str, ...)
