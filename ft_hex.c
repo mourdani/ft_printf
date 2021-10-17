@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 01:47:43 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/17 17:45:52 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 18:08:09 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,13 @@ int	get_hex_len(unsigned int n)
 	while (n >= 16)
 	{
 		len++;
-		n = n / 16;
+		n /= 16;
 	}
 	return (++len);
 }
 
 int	ft_puthex(unsigned int n, char format)
 {
-	int	len;
-
-	len = get_hex_len(n);
 	if (n >= 16)
 	{
 		ft_puthex(n / 16, format);
@@ -44,5 +41,5 @@ int	ft_puthex(unsigned int n, char format)
 		if (format == 'X')
 			ft_putchar(n - 10 + 'A');
 	}
-	return (len);
+	return (get_hex_len(n));
 }
