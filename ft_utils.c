@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:29:14 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/17 18:03:37 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 18:56:38 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_putstr(const char *s)
 
 int	ft_strlen(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 04:02:25 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/17 18:20:58 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 18:59:33 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 int	ft_format(const char format, va_list args)
 {
 	if (format == 'c')
-		return(ft_putchar(va_arg(args, int)));
+		return (ft_putchar(va_arg(args, int)));
 	else if (format == 's')
-		return(ft_putstr(va_arg(args, const char *)));
+		return (ft_putstr(va_arg(args, const char *)));
 	else if (format == 'p')
 		return (ft_putptr(va_arg(args, unsigned long)));
 	else if (format == 'd' || format == 'i')
-		return  (ft_putnum(va_arg(args, int)));
+		return (ft_putnum(va_arg(args, int)));
 	else if (format == 'u')
 		return (ft_putunum(va_arg(args, unsigned int)));
 	else if (format == 'x')
