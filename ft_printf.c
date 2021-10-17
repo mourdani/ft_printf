@@ -23,10 +23,7 @@ int	ft_format(const char format, va_list args)
 	else if (format == 's')
 		str_length = ft_putstr(va_arg(args, const char *));
 	else if (format == 'p')
-	{
-		ft_putstr("0x");
 		str_length = ft_putptr(va_arg(args, unsigned long));
-	}
 	else if (format == 'd' || format == 'i')
 		str_length = ft_putnum(va_arg(args, int));
 	else if (format == 'u')

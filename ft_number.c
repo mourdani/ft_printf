@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/05 06:21:16 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/15 01:14:57 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 17:49:25 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,18 @@ int	get_num_len(int n)
 	if (n < 0)
 	{
 		len++;
-		n = n * -1;
+		n *=  -1;
 	}
 	while (n >= 10)
 	{
-		n = n / 10;
+		n /= 10;
 		len++;
 	}
-	len++;
-	return (len);
+	return (++len);
 }
 
 int	ft_putnum(int n)
 {
-	int	len;
-
-	len = get_num_len(n);
 	if (n == -2147483648)
 		ft_putstr("-2147483648");
 	else if (n < 0)
@@ -52,5 +48,5 @@ int	ft_putnum(int n)
 	}
 	else
 		ft_putchar(n + '0');
-	return (len);
+	return (get_num_len(n));
 }

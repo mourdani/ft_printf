@@ -6,7 +6,7 @@
 /*   By: mourdani <mourdani@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/13 01:47:43 by mourdani          #+#    #+#             */
-/*   Updated: 2021/10/15 01:22:26 by mourdani         ###   ########.fr       */
+/*   Updated: 2021/10/17 17:45:52 by mourdani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ int	get_hex_len(unsigned int n)
 		len++;
 		n = n / 16;
 	}
-	len++;
-	return (len);
+	return (++len);
 }
 
 int	ft_puthex(unsigned int n, char format)
